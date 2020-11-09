@@ -1,0 +1,148 @@
+:root {
+  /*color*/
+  --white-color: #fcf8fb;
+  --black-color: #020202;
+  --red-color: #c20000;
+  --blue-color: #0043bc;
+  --pink-color: #ff94c2;
+  --gray-dark-color: #353535;
+  --gray-light-color: #dfd8d5;
+
+  /*size*/
+  --padding: 12px;
+  --avatar-size: 36px;
+
+  /*font size*/
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Fira Sans Condensed;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding);
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+header .logo {
+  font-size: var(--font-large);
+}
+
+header .logo i {
+  color: var(--red-color);
+}
+
+header .icons .fa-serch {
+  margin-right: var(--padding);
+}
+
+/* video player*/
+
+.player {
+  text-align: center;
+  background-color: var(--black-color);
+  position: sticky;
+  top: 0;
+}
+.player video {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+}
+info {
+  padding: var(--padding);
+}
+
+.info .metadate .hashtags {
+  display: flex;
+  font-size: var(--font-small);
+  color: var(--blue-color);
+}
+.info .metadate .hashtags li {
+  margin-right: var(--padding);
+}
+
+.info .metadate .titleAndButton {
+  display: flex;
+}
+.info .metadate .titleAndButton .title {
+  font-size: var(--font-medium);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-right: var(--padding);
+}
+
+.info .metadate .titleAndButton .more {
+  height: 100%;
+}
+
+.channel {
+  display: flex;
+  border-top: 1px solid var(--gray-light-color);
+
+  border-bottom: 1px solid var(--gray-light-color);
+}
+
+.channel .metadate {
+  display: flex;
+  align-items: center;
+}
+.channel .metadate img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+  margin: 4px;
+}
+.channel .metadate .chinfo .name {
+  font-size: var(--font-medium);
+  color: var(--gray-dark-color);
+}
+
+.UpNext {
+  padding: 0 var(--padding);
+}
+.UpNext > .title {
+  font-size: var(--font-medium);
+  color: var(--gray-dark-color);
+  margin-bottom: calc(var(--padding) / 2);
+}
+.UpNext .item {
+  display: flex;
+}
+.UpNext .item .img {
+  flex: 1 1 35%;
+}
+.UpNext .item .img img {
+  width: 100%;
+}
+.UpNext .item .name {
+  flex: 1 1 60%;
+}
+.UpNext .item .morebtn {
+  flex: 1 1 5%;
+}
